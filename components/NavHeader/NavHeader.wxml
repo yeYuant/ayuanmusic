@@ -1,0 +1,8 @@
+<!--components/NavHeader/NavHeader.wxml-->
+<!-- 首页推荐歌单公共组件 -->
+<view class="header">
+  <view>
+    <text>{{title}}</text>
+    <text class="more">更多</text>
+  </view>
+</view>

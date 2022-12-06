@@ -1,0 +1,34 @@
+<view class="recommedSondContainer">
+  <!-- 头部区域 -->
+  <view class="header">
+    <image src='/static/images/recommendSong/xiaoxin.png'></image>
+    <view class="date">
+      <text class="years">{{date.years}} /</text>
+      <text> {{date.month}}</text>
+    </view>
+  </view>
+  <!-- 歌曲推荐列表内容区域 -->
+  <view class="listContainer">
+    <!-- 列表头部 -->
+    <view class="listHeader">
+      <text>播放全部</text>
+      <text class="moreChecked">多选</text>
+    </view>
+    <!-- 歌曲scroll区域 -->
+    <scroll-view class="recommendScroll" scroll-y>
+      <view class="scrollItem" bindtap="toSongDetail" wx:for='{{recommendList}}' wx:key='id' id="{{item.id}}" data-song='{{item}}'
+        data-index='{{index}}'>
+        <view class="recommendInfo">
+          <image src='{{item.al.picUrl}}'></image>
+          <view class="songInfo">
+            <view class="title">{{item.name}}</view>
+            <view class="singer">{{item.ar[0].name}}</view>
+          </view>
+          <button class="btn">
+            <text class="iconfont icon-gengduo"></text>
+          </button>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>

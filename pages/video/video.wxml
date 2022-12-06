@@ -1,0 +1,57 @@
+<!--pages/video/video.wxml-->
+<view class="videoContainer">
+  <!-- 头部区域 -->
+  <view class="header">
+    <image src="/static/images/video/video.jpg"></image>
+    <text class="search">搜索歌曲</text>
+    <image src="/static/images/logo.png"></image>
+  </view>
+
+  <!-- 导航区域 -->
+  <scroll-view class="scrollView" scroll-with-animation scroll-x enable-flex scroll-into-view="{{'scroll'+navId}}">
+    <view id="{{'scroll'+item.id}}" class="navItem" wx:for='{{videoGroupList}}' wx:key="id">
+      <view class="{{navId == item.id?'active':''}}" bindtap="changeNav" id="{{item.id}}">
+        {{item.name}}
+      </view>
+    </view>
+  </scroll-view>
+
+
+  <!-- 视频区域 -->
+  <scroll-view scroll-y class="videoScroll" bindrefresherrefresh="handelRefresher" bindscrolltolower="handelToLower"
+    refresher-enabled refresher-triggered="{{isTriggered}}">
+    <view class="videoItem" wx:for="{{videoList}}" wx:key='id' wx:for-item='video'>
+      <!-- 视频内容区域 -->
+      <video autoplay danmu-btn show-mute-btn title muted class="play" src="{{video.data.urlInfo[0].url}}"
+        id="{{video.data.vid}}" wx:if="{{videoId == video.data.vid}}" wx:key="{{videoList.data.id}}"
+        poster="{{video.data.coverUrl}}" bindplay="handelPlay" bindtimeupdate="handelUpdataTime"
+        bindended="handelEnd"></video>
+
+      <!-- 使用image标签优化多个video标签播放卡顿 的问题 -->
+      <image src="{{video.data.coverUrl}}" bindtap="handelPlay" class="play" id="{{video.data.vid}}" wx:else>
+      </image>
+
+      <!-- 视频标题区域 -->
+      <view class="content">{{video.data.title}}</view>
+
+      <!-- 视频作者、用户评论点赞区域 -->
+      <view class="footer">
+        <image class="avatar" src="{{video.data.creator.avatarUrl}}"></image>
+        <text class="nickName">{{video.data.creator.nickname}}</text>
+        <view class="comments_praised">
+          <text class="item">
+            <text class="iconfont icon-dianzan"></text>
+            <text class="count">{{video.data.praisedCount}}</text>
+          </text>
+          <text class="item">
+            <text class="iconfont icon-pinglun1"></text>
+            <text class="count">{{video.data.commentCount}}</text>
+          </text>
+          <button open-type="share" class="item btn">
+            <text class="iconfont icon-gengduo"></text>
+          </button>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>

@@ -1,0 +1,195 @@
+/* pages/index/index.wxss */
+
+/* 搜索区域 */
+.searchContainer {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  padding: 17rpx 0;
+  height: 60rpx;
+  width: 100%;
+  background-color: #d23b34;
+}
+
+/* 搜索 */
+.searchContainer .search {
+  /* margin: 0 10rpx; */
+  padding-left: 20rpx;
+  width: 540rpx;
+  /* flex: 1; */
+  height: 60rpx;
+  line-height: 60rpx;
+  background-color: #fdfffe;
+  border-radius: 30rpx;
+}
+
+
+.xiangqing {
+  margin-right: 20rpx;
+  font-size: 40rpx;
+  color: #fff;
+}
+
+.searchContainer .shiqu {
+  margin-left: 18rpx;
+  font-size: 50rpx;
+  color: #fff;
+}
+
+/* 轮播图区域 */
+.banner {
+  margin: 7rpx auto 0;
+  width: 100%;
+  height: 270rpx;
+  background-color: #fff;
+}
+
+.bannerSwiper {
+  margin: 0 auto;
+  height: 100%;
+  width: 94%;
+  border-radius: 30rpx;
+  overflow: hidden;
+}
+
+.banner image {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* 导航区域 */
+.navContainer {
+  /* margin-top: 17rpx; */
+  padding: 30rpx 15rpx;
+  display: flex;
+  border-radius: 17rpx 17rpx 0 0;
+  background-color: #fff;
+  border-bottom: 1px solid #f1f0f0;
+}
+
+.navItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20%;
+}
+
+.navItem .iconfont {
+  width: 100rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  font-size: 50rpx;
+  border-radius: 50%;
+  margin: 20rpx auto;
+  color: #fff;
+  background-color: #ec4141;
+}
+
+.navItem text {
+  margin-top: -17rpx;
+  font-size: 28rpx;
+}
+
+/* 推荐歌曲区域 */
+.recommendContainer {
+  padding: 5rpx 24rpx 0;
+  margin-bottom: 0;
+  height: 370rpx;
+  font-size: 32rpx;
+  background-color: #fff;
+  border-radius: 0 0 17rpx 17rpx;
+}
+
+.recommendScroll {
+  display: flex;
+  flex-direction: row;
+  margin-top: 17rpx;
+  height: 290rpx;
+  /* padding: 0 24rpx; */
+}
+
+.scrollItem {
+  display: flex;
+  flex-direction: column;
+  margin-right: 18rpx;
+  width: 200rpx;
+  height: 270rpx;
+}
+
+.scrollItem image {
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 17rpx;
+}
+
+.scrollItem text {
+  font-size: 25rpx;
+  /* 多行文本溢出设置 */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  /* 纵向对齐 */
+  -webkit-line-clamp: 2;
+  /* 设置多行行数 */
+  overflow: hidden;
+  /* 溢出隐藏 */
+  text-overflow: ellipsis;
+  /* 省略号代替 */
+}
+
+/* 排行榜区域*/
+.toplist {
+  margin: 17rpx 0;
+  padding: 7rpx 24rpx;
+  height: 490rpx;
+  border-radius: 17rpx;
+  background-color: #fff;
+}
+
+.toplistSwiper {
+  height: 400rpx;
+}
+
+.toplistSwiper .swiperItem {
+  margin-right: 17rpx;
+  padding-left: 7rpx;
+  background-color: #fff;
+  border-radius: 17rpx;
+}
+
+.toplistSwiper .toplistTitle {
+  display: block;
+  padding: 17rpx 0;
+  font-size: 37rpx;
+}
+
+.toplistContent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 10rpx;
+  width: 96%;
+  height: 100rpx;
+  font-size: 35rpx;
+}
+
+.toplistContent image {
+  margin-right: 27rpx;
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 17rpx;
+}
+
+
+.toplistContent .name {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.toplistContent .authorName {
+  font-size: 24rpx;
+}

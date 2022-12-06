@@ -1,0 +1,53 @@
+<view class="songDetailContainer">
+  <!-- 歌曲名称和作者区域  header-->
+  <view class="songInfo">
+    <text class="musicName">{{songData.name}}</text>
+    <text class="author">{{songData.ar[0].name}} ></text>
+  </view>
+  <!-- 主体区域 -->
+  <view class="container">
+    <!-- 摇杆 -->
+    <view class="circle"></view>
+    <view class="rocker {{isPlay && 'rockerDown'}}">
+      <image src='/static/images/song/needle.png'></image>
+    </view>
+    <!-- 磁盘 -->
+    <view class="disc {{isPlay && 'discRotate'}}">
+      <image class="discImg" src='/static/images/song/disc.png'></image>
+      <image class="songImg" src='{{songData.al.picUrl}}'></image>
+    </view>
+    <!-- 播放整体区域 -->
+    <view class="progress-box">
+      <!-- 喜欢、下载、评论、选择区域 -->
+      <view class="other">
+        <text class="iconfont icon-xihuan1"></text>
+        <text class="iconfont icon-xiazai"></text>
+        <text class="iconfont icon-gechang"></text>
+        <text class="iconfont icon-jianyi"></text>
+        <text class="iconfont icon-gengduo"></text>
+      </view>
+      <!-- 进度条 -->
+      <view class="progressBox">
+        <text class="startTime">{{currentTime}}</text>
+        <!-- 总进度条 -->
+        <view class="progress">
+          <!-- 实时进度条 -->
+          <view class="realTimeProgress" style="width:{{songPlayPercent + 'rpx'}}">
+            <!-- 播放进度的小圆球 -->
+            <view class="audio-circle"></view>
+          </view>
+
+        </view>
+        <text class="allTime">{{allTime}}</text>
+      </view>
+      <!-- 播放控制、上一曲、播放、下一曲、歌曲列表 -->
+      <view class="control">
+        <text class="iconfont icon-24gl-repeat2"></text>
+        <text class="iconfont icon-shangyiqu101" id="pre" bindtap="handelSwitch"></text>
+        <text class="paly iconfont {{isPlay ? 'icon-zanting':'icon-bofang'}}" bindtap='handelMusicPlay'></text>
+        <text class="iconfont icon-xiayiqu101" id="next" bindtap="handelSwitch"></text>
+        <text class="iconfont icon-24gl-playlist2"></text>
+      </view>
+    </view>
+  </view>
+</view>

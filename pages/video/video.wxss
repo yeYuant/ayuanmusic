@@ -1,0 +1,121 @@
+/* pages/video/video.wxss */
+
+/* 搜索 区域 */
+.videoContainer .header {
+  display: flex;
+  align-items: center;
+  padding: 7rpx;
+}
+
+.videoContainer .header image {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 12rpx;
+}
+
+.videoContainer .header .search {
+  flex: 1;
+  margin: 0 7rpx;
+  padding: 7rpx 0;
+  font-size: 26rpx;
+  text-align: center;
+  color: #cf3c37;
+  border: 1px solid #ccc;
+  border-radius: 17rpx;
+}
+
+/* 导航区域 */
+.scrollView {
+  display: flex;
+  /* 不允许换行 */
+  white-space: nowrap;
+  padding: 0 27rpx;
+  height: 60rpx;
+}
+
+.scrollView .navItem {
+  height: 60rpx;
+  line-height: 54rpx;
+  font-size: 30rpx;
+  margin: 0 22rpx;
+}
+
+.scrollView .active {
+  border-bottom: 1px solid #cf3c37;
+}
+
+/* 视频区域----视频video */
+.videoScroll {
+  margin-top: 17rpx;
+  /* calc c3新特性,可以动态的计算css的宽高,注意加空格,否则css样式会失效 */
+  /* 补充: 1vh 等于 1%的高度, 1vw 等于 1%的宽度 */
+  height: calc(100vh - 132rpx);
+}
+
+.videoScroll .videoItem {
+  margin-bottom: 57rpx;
+  padding: 0 2.7%;
+}
+
+.videoScroll .videoItem .play {
+  width: 100%;
+  height: 360rpx;
+  border-radius: 17rpx;
+}
+
+/* 视频区域----标题区 */
+.videoItem .content {
+  margin-top: -17rpx;
+  font-size: 26rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  max-width: 500rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* 视频区域----作者、用户评论收藏 */
+.footer {
+  padding-bottom: 7rpx;
+  border-bottom: 1rpx solid #e4e1e1;
+}
+
+.footer .avatar {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+
+.footer .nickName {
+  font-size: 26rpx;
+  vertical-align: middle;
+  margin-left: 7rpx;
+}
+
+.footer .comments_praised {
+  float: right;
+}
+
+.comments_praised .btn {
+  display: inline;
+  padding: 0;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.comments_praised .btn:after {
+  border: none;
+}
+
+.comments_praised .item {
+  margin-left: 50rpx;
+  position: relative;
+}
+
+.comments_praised .item .count {
+  position: absolute;
+  top: -20rpx;
+  font-size: 20rpx;
+}

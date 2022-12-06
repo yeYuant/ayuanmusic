@@ -1,0 +1,66 @@
+<view class="searchContainer">
+  <!-- 顶部搜索区域 -->
+  <view class="searchBox">
+    <text class="back iconfont icon-smile"></text>
+    <view class="searchContent">
+      <text class="searchIcon iconfont icon-sousuo"></text>
+      <input type="text" value="{{keyWords}}" class="search " bindinput="handleInputChange"
+        placeholder="{{defaultKeyWords}}" placeholder-class="placeholder" />
+      <view wx:if="{{keyWords.length}}" bindtap='deleteKeywords' class="deleteBox">
+        <text class="delete">x</text>
+      </view>
+    </view>
+    <text class="searchBtn" bindtap="searchSong" data-searchList="{{searchSongList}}">搜索</text>
+  </view>
+
+  <!-- 搜索内容展示 -->
+  <view wx:if='{{keyWords.length && !searchSongList.length}}' class="showSearchContent">
+    <view class="searchContent">搜索内容：{{keyWords}}</view>
+    <view class="searchList">
+      <view class="searchItem" wx:for="{{searchShowList}}" wx:key="id" bindtap='toSearchSong' id="{{item.id}}"
+        data-keyWords='{{item.name}}'>
+        <text class="iconfont icon-sousuo"></text>
+        <text class="content">{{item.name}}</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 搜索歌曲展示区域 -->
+  <scroll-view wx:if='{{searchSongList.length}}' scroll-y class="showSongList">
+    <view class="showContent">
+      <view class="showTop">
+        <text>单曲</text>
+        <text class="paly">播放></text>
+      </view>
+      <view class="showItem" wx:for='{{searchSongList}}' wx:key='id' id='{{item.id}}' bindtap='toSongDetail'>
+        <view class="songInfo">
+          <view class="songName">{{item.name}}</view>
+          <view class="author">{{item.ar[0].name}}</view>
+        </view>
+        <text class="iconfont icon-gengduo"></text>
+      </view>
+    </view>
+  </scroll-view>
+
+  <!-- 热歌榜区域 -->
+  <view wx:if='{{!searchSongList.length&&!keyWords.length}}' class="hotList">
+    <!-- 搜搜历史区域 -->
+    <view class="historyList" wx:if='{{historyList.length}}'>
+      <view class="historyTitle">历史
+        <text bindtap='deleteHistory' class="deleteHistory iconfont icon-shanchu"></text>
+      </view>
+      <view class="historyItem">
+        <view class="historyContent" wx:for='{{historyList}}' wx:for-item='historyName' wx:key='historyName'
+          bindtap='toSearchSong' data-keyWords="{{historyName}}">
+          {{historyName}}</view>
+      </view>
+    </view>
+    <view class="title">热搜榜</view>
+    <view class="hotItem" wx:for='{{hotList}}' wx:key='index' data-hotcontent='{{item.searchWord}}'
+      bindtap='searchHotContent'>
+      <text class="order">{{item.index+1}} </text>
+      <text class="hotSong">{{item.searchWord}}</text>
+      <image wx:if='{{item.iconUrl}}' class="iconImg" src='{{item.iconUrl}}'></image>
+    </view>
+  </view>
+</view>

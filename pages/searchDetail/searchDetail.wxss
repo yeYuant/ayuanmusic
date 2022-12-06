@@ -1,0 +1,229 @@
+.searchContent {
+  background-color: #f7f7f7;
+}
+
+/* 搜索区域 */
+.searchBox {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  padding: 17rpx 0;
+  height: 60rpx;
+  width: 100%;
+  background-color: #d23b34;
+}
+
+/* 搜索 */
+.searchBox .searchContent {
+  display: flex;
+  align-items: center;
+  margin: 0 20rpx;
+  padding-left: 27rpx;
+  padding-right: 10rpx;
+  width: 540rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  background-color: rgba(215, 81, 72);
+  border-radius: 30rpx;
+}
+
+.searchBox .searchContent .search {
+  margin: 0 7rpx;
+  padding-left: 10rpx;
+  width: 500rpx;
+  height: 60rpx;
+  font-size: 27rpx;
+  color: rgba(255, 255, 255, 0.8);
+  border-radius: 30rpx;
+}
+
+.placeholder {
+  font-size: 25rpx;
+  color: rgb(255, 255, 255, 0.5);
+}
+
+.deleteBox {
+  width: 80rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+}
+
+.deleteBox .delete {
+  display: inline-block;
+  padding: 4rpx;
+  width: 20rpx;
+  height: 20rpx;
+  line-height: 15rpx;
+  text-align: center;
+  color: #fff;
+  border-radius: 50%;
+  border: 1px solid #fff;
+}
+
+.searchIcon {
+  color: #fff;
+}
+
+.back {
+  font-size: 40rpx;
+  color: #fff;
+}
+
+.searchBtn {
+  font-size: 30rpx;
+  color: #fff;
+}
+
+/* 搜索歌曲展示区域 */
+.showSongList {
+  height: calc(100vh - 60rpx);
+}
+
+.showSongList .showContent {
+  margin: 30rpx;
+  padding: 30rpx 27rpx 0 27rpx;
+  /* padding-bottom: 170rpx; */
+  border-radius: 30rpx;
+  background-color: #fff;
+}
+
+.showContent .showTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 15rpx;
+  font-size: 40rpx;
+  font-weight: 600;
+  /* border-bottom: 1px solid rgb(211, 209, 209, .3); */
+}
+
+.paly {
+  padding: 3rpx 9rpx;
+  width: 77rpx;
+  text-align: center;
+  font-size: 25rpx;
+  font-weight: 500;
+  border-radius: 30rpx;
+  border: 1px solid #ccc;
+}
+
+.showContent .showItem {
+  display: flex;
+  justify-content: space-between;
+  padding: 15rpx 0;
+  border-top: 1px solid rgb(211, 209, 209, .3);
+
+}
+
+.showContent .showItem .songInfo .songName {
+  margin-bottom: 5rpx;
+  font-size: 32rpx;
+  color: #387cc5;
+
+}
+
+.showContent .showItem .songInfo .author {
+  font-size: 23rpx;
+}
+
+.showContent .showItem text {
+  font-size: 47rpx;
+}
+
+/* 搜索内容展示区域 */
+.showSearchContent {
+  padding: 0 25rpx;
+}
+
+/* 搜索歌曲展示区域 */
+.searchContent {
+  color: rgb(147, 166, 229);
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 24rpx;
+  border-bottom: 1rpx solid #d43c33;
+}
+
+.searchItem {
+  height: 80rpx;
+  line-height: 80rpx;
+  display: flex;
+}
+
+.searchItem .content {
+  flex: 1;
+  margin-left: 20rpx;
+  border-bottom: 1rpx solid #eee;
+}
+
+/* 热搜榜区域 */
+.hotList {
+  margin: 30rpx;
+  padding: 30rpx 20rpx;
+  /* padding-bottom: 170rpx; */
+  height: auto;
+  border-radius: 30rpx;
+  background-color: #fff;
+}
+
+/* 搜搜历史区域 */
+.hotList .historyList {
+  margin-bottom: 40rpx;
+}
+
+.hotList .historyList .historyTitle {
+  font-size: 30rpx;
+  font-weight: 600;
+}
+
+.hotList .historyList .historyItem {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10rpx 0 0 20rpx;
+}
+
+.hotList .historyList .historyItem .historyContent {
+  margin-right: 20rpx;
+  margin-bottom: 10rpx;
+  padding: 5rpx 25rpx;
+  font-size: 25rpx;
+  background-color: #e2e1df;
+  border-radius: 30rpx;
+  /* border: 1px solid #ccc; */
+}
+
+.deleteHistory {
+  float: right;
+  margin-top: 5rpx;
+  padding: 5rpx 10rpx;
+  width: 30rpx;
+}
+
+/* 热搜区域 */
+.hotList .title {
+  padding-bottom: 27rpx;
+  font-size: 35rpx;
+  font-weight: 600;
+  border-bottom: 1px solid rgb(211, 209, 209, .3);
+}
+
+.hotList .hotItem {
+  display: inline-block;
+  height: 70rpx;
+  line-height: 70rpx;
+  width: 50%;
+  font-size: 27rpx;
+}
+
+.order {
+  margin-right: 7rpx;
+}
+
+.iconImg {
+  margin-left: 13rpx;
+  width: 35rpx;
+  height: 20rpx;
+  vertical-align: middle;
+}

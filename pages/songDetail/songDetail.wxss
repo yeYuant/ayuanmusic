@@ -1,0 +1,187 @@
+page {
+  height: 100%;
+}
+
+/* 歌曲详情页样式 */
+.songDetailContainer {
+  height: 100%;
+  /* background-color: #7b715d; */
+  background-color: rgba(77, 62, 36, .8);
+  /* background-color: rgba(196, 107, 41,.9); */
+}
+
+/* 歌曲信息样式 */
+.songDetailContainer .songInfo {
+  display: flex;
+  flex-direction: column;
+  padding-top: 7rpx;
+  text-align: center;
+  margin-bottom: 30rpx;
+}
+
+.songDetailContainer .songInfo .musicName {
+  font-size: 37rpx;
+}
+
+.songDetailContainer .songInfo .author {
+  font-size: 28rpx;
+}
+
+/* 主体区域 */
+.songDetailContainer .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.circle {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 52rpx;
+  height: 52rpx;
+  background-color: #e0e0e0;
+  border-radius: 50%;
+  z-index: 99;
+}
+
+/* 摇杆 */
+.songDetailContainer .container .rocker {
+  position: relative;
+  top: -25rpx;
+  left: 9rpx;
+  width: 182rpx;
+  height: 264rpx;
+  transform-origin: 67rpx 0;
+  transform: rotate(-30deg);
+  transition: transform 0.4s;
+  z-index: 1;
+}
+
+.songDetailContainer .container .rockerDown {
+  transform: rotate(0deg);
+}
+
+.songDetailContainer .container .rocker image {
+  margin-left: 25%;
+  width: 100%;
+  height: 100%;
+}
+
+/* 磁盘 */
+.songDetailContainer .container .disc {
+  position: relative;
+  top: -160rpx;
+  width: 597rpx;
+  height: 597rpx;
+}
+
+.discRotate {
+  animation: disc 10s infinite linear;
+  animation-delay: 1s;
+}
+
+/* @keyframes */
+/* 动画 : 动画有两种形式 
+  from to :简单动画
+  百分比动画
+*/
+@keyframes disc {
+  from {}
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+.songDetailContainer .container .disc .discImg {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  /* box-shadow: 2rpx 2rpx 20rpx #666; */
+
+}
+
+.container .disc .songImg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 371rpx;
+  height: 371rpx;
+  border-radius: 50%;
+}
+
+/* 进度条 */
+.container .progress-box {
+  position: absolute;
+  bottom: 140rpx;
+  width: 87%;
+  /* height: 10rpx; */
+}
+
+.container .progress-box .progressBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 30rpx 0;
+}
+
+.container .progress-box .progressBox .progress {
+  /* position: relative; */
+  margin: 0 7rpx;
+  width: 490rpx;
+  height: 4rpx;
+  background-color: rgba(0, 0, 0, .1);
+  border-radius: 10rpx;
+}
+
+/* 实时进度条 */
+.container .progress-box .progressBox .realTimeProgress {
+  position: relative;
+  height: 4rpx;
+  background-color: #fff;
+}
+
+/* 进度条右边的小球 */
+.audio-circle {
+  position: absolute;
+  top: -5rpx;
+  right: -6rpx;
+  width: 12rpx;
+  height: 12rpx;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.songDetailContainer .container .progress-box .progressBox text {
+  font-size: 20rpx;
+  /* width: 9%; */
+}
+
+.iconfont {
+  font-size: 50rpx;
+}
+
+.other {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.control {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+}
+
+
+.paly {
+  /* padding: 25rpx; */
+  margin: 0 -10rpx;
+  font-size: 92rpx;
+}
